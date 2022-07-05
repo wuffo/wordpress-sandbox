@@ -13,8 +13,8 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/*
 
 # タイムゾーンの設定
-RUN rm /etc/localtime && \
-  ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+# RUN rm /etc/localtime && \
+#  ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 # PHP 拡張の設定
 RUN docker-php-ext-install zip mysqli gd exif opcache && \
@@ -35,7 +35,6 @@ ENV PATH="$PATH:/opt/wp-cli/bin"
 
 # WordPress の最新版をダウンロード
 RUN wp core download \
-  --locale=ja \
   --version=latest \
   --path=/var/www/html \
   --allow-root
