@@ -52,8 +52,6 @@ RUN cat /tmp/wp-config-extra.txt | \
   --dbuser="$MYSQL_USER" \
   --dbpass="$MYSQL_PASSWORD" \
   --dbhost="$MYSQL_HOST" \
-  --dbcharset=utf8mb4 \
-  --dbcollate=utf8mb4_unicode_ci \
   --extra-php \
   --skip-check \
   --allow-root
