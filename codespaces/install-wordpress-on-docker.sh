@@ -7,7 +7,7 @@ WP_ADMIN_PASSWORD="password"
 exec docker compose exec wordpress \
   wp --allow-root core install \
   --url="$WP_URL" \
-  --title="WordPress サンドボックス" \
+  --title="WordPress Sandbox" \
   --admin_user="$WP_ADMIN_USER" \
   --admin_email="$WP_ADMIN_EMAIL" \
   --admin_password="$WP_ADMIN_PASSWORD" \
